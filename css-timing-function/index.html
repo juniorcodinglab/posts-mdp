@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+    <title>Timing</title>
+</head>
+
+<style>
+    body {
+        background-color: #171717;
+        padding: 40px;
+        font-family: 'Inter', sans-serif;
+    }
+
+    @keyframes walk {
+        from {
+            left: 0;
+        }
+
+        to {
+            left: 92%;
+        }
+    }
+
+    .container {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .title {
+        font-size: 16px;
+        color: #FFF;
+    }
+
+    .container > div {
+        background-color: #434343;
+        padding: 10px;
+        width: 100%;
+        border-radius: 5px;
+        margin: 10px 0;
+    }
+
+    .item {
+        width: 25px;
+        height: 25px;
+        display: block;
+        border-radius: 50%;
+        background-color: #500c0c;
+        position: relative;
+        animation-name: walk;
+        animation-duration: 3s;
+        animation-iteration-count: 2;
+        animation-direction: alternate;
+        left: 0;
+    }
+
+    .linear .item {
+        animation-timing-function: linear;
+    }
+
+    .ease .item {
+        animation-timing-function: ease;
+    }
+
+    .ease-in .item {
+        animation-timing-function: ease-in;
+    }
+
+    .ease-in-out .item {
+        animation-timing-function: ease-in-out;
+    }
+
+    .ease-out .item {
+        animation-timing-function: ease-out;
+    }
+
+    .steps .item {
+        animation-timing-function: steps(20);
+    }
+
+    .cubic-bezier .item {
+        animation-timing-function: cubic-bezier(0.1, 0.7, 1, 0.1);
+    }
+
+    
+
+</style>
+
+<body>
+    <div class="container">
+        <span class="title">linear</span>
+        <div class="linear">
+            <span class="item"></span>
+        </div>
+        <span class="title">ease</span>
+        <div class="ease">
+            <span class="item"></span>
+        </div>
+            <span class="title">ease-in</span>
+        <div class="ease-in">
+            <span class="item"></span>
+        </div>
+        <span class="title">ease-in-out</span>
+        <div class="ease-in-out">
+            <span class="item"></span>
+        </div>
+        <span class="title">ease-out</span>
+        <div class="ease-out">
+            <span class="item"></span>
+        </div>
+            <span class="title">steps</span>
+        <div class="steps">
+            <span class="item"></span>
+        </div>
+        <span class="title">cubic-bezier</span>
+        <div class="cubic-bezier">
+            <span class="item"></span>
+        </div>
+    </div>
+</body>
+</html>
